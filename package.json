@@ -4,13 +4,13 @@
   "description": "learning node.js",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "express": "4.17.1",
     "pug": "3.0.0",
     "sqlite": "4.0.14"
-
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/mephi007/nodeJSLearning/issues"
   },
-  "homepage": "https://github.com/mephi007/nodeJSLearning#readme"
+  "homepage": "https://github.com/mephi007/nodeJSLearning#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }

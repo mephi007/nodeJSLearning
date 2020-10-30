@@ -1,10 +1,19 @@
 const express = require("express");
-let app = new express();
+const app = express();
+app.use(express.json())
 
 app.get("/", function(req, res){
-    res.send("hello from sample");
+    res.render('home');
 });
 
-app.listen(3000, function(){
-    console.log("server started at 3000");
-});
+async function startServer() {
+    app.listen(4000, err => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log("Server running on port 4000!");
+    });
+}
+
+startServer();
