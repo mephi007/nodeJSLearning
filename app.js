@@ -1,10 +1,14 @@
 const express = require("express");
-const app = express();
-app.use(express.json())
+const expressLayouts = require('express-ejs-layouts');
 
-app.get("/", function(req, res){
-    res.render('home');
-});
+const app = express();
+
+//ejs
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
+
+//routes
+app.use('/', require('./routes/index.js'));
 
 async function startServer() {
     app.listen(4000, err => {
